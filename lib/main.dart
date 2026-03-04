@@ -32,7 +32,7 @@ class MyApp extends StatelessWidget {
           seedColor: const Color.fromARGB(255, 0, 47, 255),
         ),
       ),
-      home: const MyHomePage(title: 'Muhammad Rizky Zuhriansyah - 3124521033'),
+      home: const MyHomePage(title: 'Counter APP'),
     );
   }
 }
@@ -67,6 +67,12 @@ class _MyHomePageState extends State<MyHomePage> {
   void _decrementCounter() {
     setState(() {
       _counter--;
+    });
+  }
+
+  void _resetCounter() {
+    setState(() {
+      _counter = 0;
     });
   }
 
@@ -107,6 +113,8 @@ class _MyHomePageState extends State<MyHomePage> {
           // wireframe for each widget.
           mainAxisAlignment: .center,
           children: [
+            const Text('Muhammad Rizky Zuhriansyah'),
+            const Text('3124521033'),
             const Text('You have pushed the button this many times:'),
             Text(
               '$_counter',
@@ -122,6 +130,12 @@ class _MyHomePageState extends State<MyHomePage> {
             onPressed: _decrementCounter,
             tooltip: 'Decrement',
             child: const Icon(Icons.remove),
+          ),
+          const SizedBox(width: 16),
+          FloatingActionButton(
+            onPressed: _resetCounter,
+            tooltip: 'Reset',
+            child: const Icon(Icons.refresh),
           ),
           const SizedBox(width: 16),
           FloatingActionButton(
