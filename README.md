@@ -1,5 +1,5 @@
 # foto tugas
 
 <p align="center">
-  <img src="tugas1.png" width="300">
+  <img src="tugas1.png" width="500">
 </p>
